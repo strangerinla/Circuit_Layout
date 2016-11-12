@@ -1,0 +1,38 @@
+﻿<Window x:Class="Circuit_Layout.EditWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:local="clr-namespace:Circuit_Layout"
+        Title="EditWindow" Height="100" Width="220" Loaded="Window_Loaded" ResizeMode="NoResize" KeyDown="Window_KeyDown" ShowInTaskbar="False" WindowStartupLocation="CenterOwner">
+
+    <Grid Background="LightGray">
+        <StackPanel Orientation="Vertical">
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Name="spName" Margin="5 5 20 0">
+                <TextBlock Text="Name:" Margin="5" VerticalAlignment="Center"/>
+                <TextBox Name="tbName" Width="90"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Name="spEds" Visibility="Collapsed" Margin="5 5 20 0">
+                <TextBlock Text="EDS:" Margin="5" VerticalAlignment="Center"/>
+                <TextBox Name="tbEds" Width="90" PreviewTextInput="DoubleTextBox_PreviewTextInput"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Name="spResistance" Visibility="Collapsed" Margin="5 5 20 0">
+                <TextBlock Text="Resistance:" Margin="5" VerticalAlignment="Center"/>
+                <TextBox Name="tbResistance" Width="90" PreviewTextInput="DoubleTextBox_PreviewTextInput"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Name="spReohordDisplayMode" Visibility="Collapsed" Margin="5 5 20 0">
+                <TextBlock Text="Display mode:" Margin="5" VerticalAlignment="Center"/>
+                <ComboBox Name="cbReohordDisplayMode" Width="90">
+                    <ComboBoxItem Content="Length"/>
+                    <ComboBoxItem Content="Resistance"/>
+                </ComboBox>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Name="spDivision" Visibility="Collapsed" Margin="5 5 20 0">
+                <TextBlock Text="Division:" Margin="5" VerticalAlignment="Center"/>
+                <TextBox Name="tbDivision" Width="90" PreviewTextInput="DoubleTextBox_PreviewTextInput"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                <Button Content="OK" Margin="5" Click="ButtonOK_Click"/>
+                <Button Content="Cancel" Margin="5" Click="ButtonCancel_Click"/>
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</Window>
